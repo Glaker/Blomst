@@ -1,7 +1,6 @@
 import galleryColumn from '../assets/gallery-column.jpg'
 import lookStairs from '../assets/look-stairs.jpg'
 import blouseDetail from '../assets/blouse-detail.jpg'
-import burgundyStairs from '../assets/burgundy-stairs.jpg'
 import editorialDetail from '../assets/editorial-detail.jpg'
 
 export const navLinks = [
@@ -15,7 +14,7 @@ export const navLinks = [
 export const images = {
   hero: { src: galleryColumn, alt: 'Look BLOMST fotografiado en una galería de arte' },
   look: { src: lookStairs, alt: 'Look completo BLOMST' },
-  story: { src: burgundyStairs, alt: 'Editorial BLOMST en escalera de arquitectura clásica' },
+  story: { src: editorialDetail, alt: 'Editorial BLOMST sobre una escalera de mármol con piso damero' },
 }
 
 export const universes = ['Night Out', 'Comfy-Chic', 'Workwear']
@@ -44,14 +43,6 @@ export const products = [
     img: lookStairs,
     alt: 'Falda de denim en conjunto',
     desc: 'Pieza inferior de denim que combina recortes y paneles en distintos tonos. La imagen corresponde al look editorial completo.',
-  },
-  {
-    title: 'Burgundy Layer',
-    ref: 'BL-004',
-    universe: 'Night Out',
-    img: burgundyStairs,
-    alt: 'Detalle de prenda inferior bordó',
-    desc: 'Prenda inferior en tono bordó que aporta contraste cromático al conjunto. Los detalles técnicos se completarán en la ficha definitiva.',
   },
 ]
 

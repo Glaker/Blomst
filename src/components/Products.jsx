@@ -12,7 +12,7 @@ export default function Products() {
         Descubrí cada pieza que compone el conjunto BLOMST.
       </SectionHead>
 
-      <div className="mx-auto grid max-w-[1300px] grid-cols-4 gap-[18px] max-[850px]:grid-cols-2 max-[620px]:gap-3">
+      <div className="mx-auto grid max-w-[1120px] grid-cols-3 gap-[26px] max-[850px]:gap-[16px] max-[620px]:grid-cols-1 max-[620px]:gap-8">
         {products.map((p, i) => (
           <button
             key={p.ref}
@@ -20,7 +20,7 @@ export default function Products() {
             onClick={() => setSelected(i)}
             className="group cursor-pointer text-left"
           >
-            <div className="relative h-[390px] overflow-hidden bg-[#e8e0d2] max-[850px]:h-[330px] max-[620px]:h-[260px]">
+            <div className="relative h-[520px] overflow-hidden bg-[#e8e0d2] max-[850px]:h-[400px] max-[620px]:h-[460px]">
               <img
                 src={p.img}
                 alt={p.alt}

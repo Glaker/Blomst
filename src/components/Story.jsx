@@ -1,7 +1,7 @@
 import { images, values } from '../data/content'
 import { Eyebrow, Section } from './ui'
 
-const p = 'mb-5 font-serif text-[20px] leading-[1.65] text-taupe'
+const p = 'mb-5 font-serif text-[20px] leading-[1.65] font-medium text-[#241a15]'
 
 export default function Story() {
   return (
@@ -37,7 +37,7 @@ export default function Story() {
         {values.map((v) => (
           <div key={v.title} className="min-h-[210px] bg-paper px-7 py-[35px]">
             <h3 className="mb-3.5 font-serif text-[29px] text-wine">{v.title}</h3>
-            <p className="font-serif text-[17px] leading-[1.55] text-taupe">{v.text}</p>
+            <p className="font-serif text-[17px] leading-[1.55] font-medium text-[#241a15]">{v.text}</p>
           </div>
         ))}
       </div>
