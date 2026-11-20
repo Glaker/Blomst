@@ -20,12 +20,15 @@ export default function Products() {
             onClick={() => setSelected(i)}
             className="group cursor-pointer text-left"
           >
-            <div className="relative h-[520px] overflow-hidden bg-[#e8e0d2] max-[850px]:h-[400px] max-[620px]:h-[460px]">
+            <div
+              className="relative h-[520px] overflow-hidden bg-[#e8e0d2] max-[850px]:h-[400px] max-[620px]:h-[460px]"
+              style={p.bg ? { backgroundColor: p.bg } : undefined}
+            >
               <img
                 src={p.img}
                 alt={p.alt}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-[600ms] group-hover:scale-[1.035]"
+                className={`h-full w-full ${p.fit === 'contain' ? 'object-contain p-3' : 'object-cover'} transition-transform duration-[600ms] group-hover:scale-[1.035]`}
               />
             </div>
             <div className="px-0.5 py-[15px]">
@@ -33,7 +36,7 @@ export default function Products() {
                 Ref. {p.ref} · {p.universe}
               </p>
               <h3 className="mb-[5px] font-serif text-[22px] max-[620px]:text-[19px]">{p.title}</h3>
-              <div className="text-[11px] tracking-[.08em]">Precio a definir</div>
+              <div className="text-[17px] font-medium tracking-[.04em] text-ink max-[620px]:text-[16px]">{p.price ?? 'Precio a definir'}</div>
             </div>
           </button>
         ))}

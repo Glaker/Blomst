@@ -1,6 +1,11 @@
+import polleraPetalo from '../assets/pollera-petalo.jpeg'
+import chaleco from '../assets/chaleco.jpeg'
+import telaInicio from '../assets/telainicio.png'
+import look from '../assets/look.jpg'
 import galleryColumn from '../assets/gallery-column.jpg'
 import lookStairs from '../assets/look-stairs.jpg'
 import blouseDetail from '../assets/blouse-detail.jpg'
+import blusaCorola from '../assets/blusa-corola.jpg'
 import editorialDetail from '../assets/editorial-detail.jpg'
 
 export const navLinks = [
@@ -12,8 +17,8 @@ export const navLinks = [
 ]
 
 export const images = {
-  hero: { src: galleryColumn, alt: 'Look BLOMST fotografiado en una galería de arte' },
-  look: { src: lookStairs, alt: 'Look completo BLOMST' },
+  hero: { src: telaInicio, alt: 'Look BLOMST fotografiado en una galería de arte' },
+  look: { src: look, alt: 'Look completo BLOMST' },
   story: { src: editorialDetail, alt: 'Editorial BLOMST sobre una escalera de mármol con piso damero' },
 }
 
@@ -21,28 +26,35 @@ export const universes = ['Night Out', 'Comfy-Chic', 'Workwear']
 
 export const products = [
   {
-    title: 'Printed Ruffle Blouse',
+    title: 'Blusa Corola',
     ref: 'BL-001',
     universe: 'Comfy-Chic',
-    img: blouseDetail,
-    alt: 'Blusa estampada con cuello volado',
-    desc: 'Blusa estampada de base clara, con cuello volado y silueta con volumen. La ficha final incorporará la composición textil y los detalles de confección.',
+    img: blusaCorola,
+    alt: 'Blusa Corola estampada con cuello volado',
+    price: '$67.135',
+    sizes: ['S', 'M', 'L', 'XL'],
+    desc: 'Blusa estampada de base clara, con cuello volado y silueta con volumen.',
   },
   {
-    title: 'Layered Denim Vest',
+    title: 'Pollera Pétalo',
     ref: 'BL-002',
     universe: 'Workwear',
-    img: galleryColumn,
-    alt: 'Chaleco de denim con mangas verdes',
-    desc: 'Prenda superior de denim con paneles y mangas de volumen en contraste. Una pieza que integra recursos de superposición y construcción.',
+    img: polleraPetalo,
+    alt: 'Pollera Pétalo de denim con volados, botones y base bordó',
+    price: '$125.210',
+    desc: 'Falda con volados, botones y combinaciones de tela.',
   },
   {
-    title: 'Patchwork Denim Skirt',
+    title: 'Chaleco Tallo',
     ref: 'BL-003',
     universe: 'Comfy-Chic',
-    img: lookStairs,
-    alt: 'Falda de denim en conjunto',
-    desc: 'Pieza inferior de denim que combina recortes y paneles en distintos tonos. La imagen corresponde al look editorial completo.',
+    img: chaleco,
+    fit: 'contain',
+    bg: '#f5f0ec',
+    alt: 'Chaleco de denim con paneles y mangas verdes',
+    price: '$90.600',
+    sizes: ['S', 'M', 'L', 'XL'],
+    desc: 'Prenda superior de denim con recortes horizontales y verticales.',
   },
 ]
 

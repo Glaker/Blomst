@@ -33,26 +33,25 @@ export default function ProductModal({ product, onClose }) {
         <img
           src={product.img}
           alt={product.alt}
-          className="h-full max-h-[650px] w-full object-cover max-[620px]:h-[300px]"
+          className={`h-full max-h-[650px] w-full max-[620px]:h-[300px] ${product.fit === 'contain' ? 'object-contain' : 'object-cover'}`}
+          style={product.bg ? { backgroundColor: product.bg } : undefined}
         />
         <div className="p-[45px_35px] max-[620px]:p-[25px]">
           <Eyebrow>
             Ref. {product.ref} · {product.universe}
           </Eyebrow>
           <h3 className="my-2 font-serif text-[36px]">{product.title}</h3>
-          <div className="text-[11px] tracking-[.08em]">Precio a definir</div>
+          <div className="text-[22px] font-medium tracking-[.04em] text-ink">{product.price ?? 'Precio a definir'}</div>
           <p className="my-[18px] font-serif text-lg leading-[1.5] text-[#76685e]">{product.desc}</p>
 
           <div className="mt-[25px] text-[9px] uppercase tracking-[.15em]">Talles disponibles</div>
           <div className="mt-2.5 mb-5 flex gap-2">
-            <span className="border border-line px-[13px] py-[9px] text-[10px] text-[#82766d]">A definir</span>
+            {(product.sizes ?? ['A definir']).map((s) => (
+              <span key={s} className="border border-line px-[13px] py-[9px] text-[10px] text-[#82766d]">
+                {s}
+              </span>
+            ))}
           </div>
-
-          <div className="mt-[25px] text-[9px] uppercase tracking-[.15em]">Estado</div>
-          <p className="my-[18px] font-serif text-lg leading-[1.5] text-[#76685e]">
-            Ficha conceptual. La fotografía individual, composición y curva de talles se completarán con la
-            información final del proyecto.
-          </p>
         </div>
       </div>
     </div>
